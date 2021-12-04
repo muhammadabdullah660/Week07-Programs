@@ -282,3 +282,30 @@ function monthDays() {
     alert("Invalid day number");
   }
 }
+
+// Number of days in a month
+function perctAndGrade() {
+  var phy = parseInt(document.getElementById("phy").value);
+  var chem = parseInt(document.getElementById("chem").value);
+  var bio = parseInt(document.getElementById("bio").value);
+  var math = parseInt(document.getElementById("math").value);
+  var cmp = parseInt(document.getElementById("cmp").value);
+  var perct = ((phy + chem + bio + math + cmp) / 500) * 100;
+  console.log(perct);
+  console.log(phy, chem, bio, cmp, math);
+  if (phy == "" || chem == "" || bio == "" || math == "" || cmp == "") {
+    alert("Enter a value");
+  } else if (perct >= 90) {
+    document.getElementById("marksPerctR").innerHTML = `${perct}% and Grade A`;
+  } else if (perct >= 80) {
+    document.getElementById("marksPerctR").innerHTML = `${perct}% and Grade B`;
+  } else if (perct >= 70) {
+    document.getElementById("marksPerctR").innerHTML = `${perct}% and Grade C`;
+  } else if (perct >= 60) {
+    document.getElementById("marksPerctR").innerHTML = `${perct}% and Grade D`;
+  } else if (perct >= 40) {
+    document.getElementById("marksPerctR").innerHTML = `${perct}% and Grade E`;
+  } else if (perct < 40) {
+    document.getElementById("marksPerctR").innerHTML = `${perct}% and Grade F`;
+  }
+}

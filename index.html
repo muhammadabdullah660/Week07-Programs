@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Programs</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Conditions</h1> <br>
+        <div class="row">
+            <!-- Maximum Number(2) -->
+            <div class="col-md-3">
+                <h3>Maximum Number(2)</h3><br>
+                Enter Numeric Values: <br>
+                <input type="number" placeholder="Enter value 1" id="num1"><br>
+                <input type="number" placeholder="Enter value 2" id="num2"><br>
+                <button class="button" onclick="maxNum2()">Find</button><br><br>
+                <p id="maxNum2R" class="outputs"></p>
+            </div>
+            <div class="col-md-3">
+                <h3>Maximum Number(3)</h3><br>
+                Enter Numeric Values: <br>
+                <input type="number" placeholder="Enter value 1" id="num1M"><br>
+                <input type="number" placeholder="Enter value 2" id="num2M"><br>
+                <input type="number" placeholder="Enter value 3" id="num3M"><br>
+                <button class="button" onclick="maxNum3()">Find</button><br><br>
+                <p id="maxNum3R" class="outputs"></p>
+            </div>
+            <!-- Divisible by 5 or 11? -->
+            <div class="col-md-3">
+                <h3>Divisible by 5 or 11?</h3><br>
+                Enter Numeric Value: <br>
+                <input type="number" placeholder="Enter value" id="numD"><br>
+                <button class="button" onclick="divisibleNum()">Find</button><br><br>
+                <p id="numDR" class="outputs"></p>
+            </div>
+            <!-- Vowel Or Consonant? -->
+            <div class="col-md-3">
+                <h3>Vowel Or Consonant?</h3><br>
+                Enter an Alphabet: <br>
+                <input type="text" placeholder="Enter a single alphabet" id="vowelC" maxlength="1"><br>
+                <button class="button" onclick="vowelConsonant()">Find</button><br><br>
+                <p id="vowelCR" class="outputs"></p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Leap Year or not -->
+            <div class="col-md-3">
+                <h3>Leap Year?</h3><br>
+                Enter a Year: <br>
+                <input type="tel" id="leapYear" placeholder="Enter a Year" maxlength="4"> <br>
+                <button class="button" onclick="leapYear()">Check</button>
+                <p id="leap" class="outputs"></p>
+            </div>
+            <!-- Sign of Number -->
+            <div class="col-md-3">
+                <h3>Number Sign</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="numSign" placeholder="Enter value"> <br>
+                <button class="button" onclick="numSign()">Check</button>
+                <p id="numSignR" class="outputs"></p>
+            </div>
+            <!-- Character is alphabet or not? -->
+            <div class="col-md-3">
+                <h3>Alphabet or not</h3><br>
+                Enter a single character: <br>
+                <input type="text" id="alphaC" placeholder="Enter a character" maxlength="1"> <br>
+                <button class="button" onclick="characterAlpha()">Check</button>
+                <p id="alphaCR" class="outputs"></p>
+            </div>
+            <div class="col-md-3">
+                <h3>Odd or Even?</h3><br>
+                Enter a numeric value: <br>
+                <input type="number" id="userOENum" placeholder="Enter a value"> <br>
+                <button class="button" onclick="evenOrOdd()">Check</button>
+                <p id="userOENumR" class="outputs"></p>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <!-- Alphabet, digit or special character -->
+            <div class="col-md-4">
+                <h3>Alphabet, digit or special character?</h3><br>
+                Enter a single character: <br>
+                <input type="text" id="aDS" placeholder="Enter a character" maxlength="1"> <br>
+                <button class="button" onclick="aDSChar()">Check</button>
+                <p id="aDSR" class="outputs"></p>
+            </div>
+            <!-- Bill Calculation -->
+            <div class="col-md-4" id="billDiv">
+                <h3>Bill Calculation</h3><br>
+                Enter No. of Units: <br>
+                <input type="text" id="units" placeholder="No. of Units goes here"><br>
+                <button class="button" onclick="billCalc()">Calculate</button>
+            </div>
+            <!-- Salary Calculation -->
+            <div class="col-md-4" id="salaryDiv">
+                <h3>Calculating Salary</h3><br>
+                Enter Salary Amount: <br>
+                <input id="salary" type="text" placeholder="Salary goes here"><br>
+                <button class="button" onclick="salaryCalc()">Calculate</button>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <!-- Uppercase or lowercase alphabet -->
+            <div class="col-md-3">
+                <h3>Uppercase or Lowercase</h3><br>
+                Enter a single character: <br>
+                <input type="text" placeholder="Enter a character" id="uLC" maxlength="1"><br>
+                <button class="button" onclick="upperOrLower()">Result</button><br><br>
+                <p id="uLCR" class="outputs"></p>
+            </div>
+            <!-- Week day -->
+            <div class="col-md-3">
+                <h3>Day of the week</h3><br>
+                Enter day number: <br>
+                <input type="num" placeholder="Enter a numeric value" id="dayNum" maxlength="1"><br>
+                <button class="button" onclick="weekDay()">Result</button><br><br>
+                <p id="dayNumR" class="outputs"></p>
+            </div>
+            <!-- Number of days in a month -->
+            <div class="col-md-3">
+                <h3>Number of days in a month</h3><br>
+                Enter month number: <br>
+                <input type="num" placeholder="Enter a numeric value" id="monthNum" maxlength="2"><br>
+                <button class="button" onclick="monthDays()">Result</button><br><br>
+                <p id="monthNumR" class="outputs"></p>
+            </div>
+        </div>
+
+    </div><br><br>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
